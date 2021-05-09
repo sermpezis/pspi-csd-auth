@@ -1,0 +1,18 @@
+<html>
+    <head>
+      {% if title %}
+      <title>Welcome to the {{ title }}</title>
+      {% else %}
+      <title>Welcome</title>
+      {% endif %}
+    </head>
+    <body>
+        <div><p>How to use the api: URL/api/genders/option, where <b>option</b> can take one of the following values:</p></div>
+        {% for i in our_custom_input %}
+        <div><p>{{ i }}</p></div>
+        {% endfor %}
+        <div>Go to the <a href="https://github.com/sermpezis/pspi-csd-auth">github page</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>

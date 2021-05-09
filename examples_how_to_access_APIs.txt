@@ -1,0 +1,39 @@
+**
+
+* Diavgeia test API 
+https://test3.diavgeia.gov.gr/luminapi/opendata/search.xml?org=10599&from_date=2021-05-01
+
+* Diavgeia operational API 
+https://diavgeia.gov.gr/opendata/types.json
+https://diavgeia.gov.gr/opendata/types.xml
+
+* Github 
+https://api.github.com/users/sermpezis/repos?sort=full_name&direction=desc
+https://api.github.com/users/sermpezis/repos?sort=full_name&direction=asc
+
+
+
+** data.gov.gr (σημείωση: το token που φαινεται παρακάτω δεν είναι εγκυρο)
+
+* browser (returns authentication error)
+https://data.gov.gr/api/v1/query/minenv_inspectors
+
+* cURL 
+curl --request GET https://data.gov.gr/api/v1/query/minenv_inspectors --header “Authorization: Token 87a465af94af31194a24dcadf7e12b3c9e22b366”
+
+* Postman
+πεδίο GET --> 
+	https://data.gov.gr/api/v1/query/minenv_inspectors
+πεδίο Authorization --> 
+	πεδίο Type --> API Key
+		πεδίο Key --> Authorization
+		πεδίο Value --> Token 87a465af94af31194a24dcadf7e12b3c9e22b366
+		πεδίο Add to --> Header
+
+* Python
+import requests
+url = 'https://data.gov.gr/api/v1/query/minenv_inspectors'
+headers = {'Authorization':'Token 87a465af94af31194a24dcadf7e12b3c9e22b366'}
+response = requests.get(url, headers=headers)
+print(response.status_code)
+print(response.json())

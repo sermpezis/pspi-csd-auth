@@ -1,0 +1,8 @@
+{% extends "home.html" %}
+
+{% block content %}
+    <h1>Hi! this is an extended version of the API home page that just repeats the options</h1>
+    {% for i in our_custom_input %}
+    <div><p>{{ i }}</p></div>
+    {% endfor %}
+{% endblock %}
