@@ -34,7 +34,8 @@ def api_home():
 	In this example we only define (statically) two values/words we want to appear in the API's home page
 	'''
 	api_params_values=['man', 'woman']
-	return render_template('home.html', title='API home page', our_custom_input=api_params_values)
+	return jsonify(api_params_values)
+	# return render_template('home.html', title='API home page', our_custom_input=api_params_values)
 	# return render_template('home.html', our_custom_input=api_params_values)
 	# return render_template('home_extended.html', title='API home page', our_custom_input=api_params_values)
 
@@ -61,5 +62,5 @@ def add_person_to_list_of_people():
 '''
 optionally different IP and ports can be selected
 '''
-# if __name__ == "__main__":
-#     app.run(debug=True, host='127.0.0.1', port=5110)
+if __name__ == "__main__":
+    app.run(debug=True, host='127.0.0.1', port=5001)
