@@ -63,4 +63,4 @@ def add_person_to_list_of_people():
 optionally different IP and ports can be selected
 '''
 if __name__ == "__main__":
-    app.run(debug=True, host='127.0.0.1', port=5001)
+    app.run(debug=True, host='127.0.0.1', port=5000)
